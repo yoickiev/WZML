@@ -74,7 +74,7 @@ class TgUploader:
 
     def __upload_file(self, up_path, file_, dirpath):
         fsize = ospath.getsize(up_path)
-        if fsize > 2097152000:
+        if fsize > 4097151000:
             client = premium_session
         else:
             client = app
@@ -113,7 +113,7 @@ class TgUploader:
         #     cap = f"\n\n{CAPTION_X}\n\n"
         dumpid = LEECH_DICT.get(self.__listener.message.from_user.id, "")
         if len(dumpid) != 0:
-            if fsize > 2097152000:
+            if fsize > 4097151000:
                 LEECH_X = int(dumpid)
             else:
                 LEECH_X = int(dumpid)
